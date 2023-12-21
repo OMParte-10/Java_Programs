@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class math{
+public class Positive{
 	public static void main(String args[])
 	{
 		System.out.print("Enter a number:");
