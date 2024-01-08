@@ -1,24 +1,30 @@
-//Program to implement the concept of dynamic method dispatch.
-class Student {
-      int maxRollNo = 100;
+// Program to create a reference variable
+import java.util.Scanner;
+class Area
+{
+  double length;
+  double weadth;
+
+  public void inputValues()
+  {
+    Scanner reader = new Scanner(System.in);
+    System.out.print("\nEnter the length: ");
+    length = reader.nextDouble();
+    System.out.print("\nEnter the weadth: ");
+    weadth = reader.nextDouble();
+  }
+  public double showArea()
+  {
+    return length*weadth;
+  }
 }
- 
-class SchoolStudent extends Student{
-      int maxRollNo = 80;
-}
- 
-class CollegeStudent extends SchoolStudent{
-      int maxRollNo = 700;
-}
- 
-public class DynamicMethodDispatch {
-      public static void main(String args[]){
-       //Super class can contain subclass object.   
-       Student obj1 = new CollegeStudent();
-       Student obj2 = new SchoolStudent();
- 
-       //In both calls maxRollNo of super class will be printed.
-       System.out.println(obj1.maxRollNo);
-       System.out.println(obj2.maxRollNo);
-      }
+public class ReferceVariable
+{
+  public static void main(String args[])
+  {
+     Area obj1 = new Area();
+     Area obj2 = obj1;             // Refernce Variable
+     obj1.inputValues();
+     System.out.print("\nThe area is " + obj2.showArea());
+  }
 }
